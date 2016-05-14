@@ -59,11 +59,11 @@ namespace Mist
 		void SetValidationCallback(ValidationCallback validationCallback);
 
 	private:
-		ReturnType m_ReturnValue;
-		ValidationType m_Validation;
-		bool m_IsVerified;
+		ReturnType			m_ReturnValue;
+		ValidationType		m_Validation;
+		bool				m_IsVerified;
 
-		ValidationCallback m_ValidationCallback;
+		ValidationCallback	m_ValidationCallback;
 
 	};
 
