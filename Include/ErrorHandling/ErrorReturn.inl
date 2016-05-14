@@ -115,6 +115,14 @@ namespace Mist
 		return std::move(errorToReturn);
 	}
 
+	template<typename ReturnType>
+	ErrorReturn<ReturnType, bool> MakeErrorReturn(ReturnType returnValue, bool validation)
+	{
+		// Create the error return and return it to the caller
+		ErrorReturn<ReturnType, bool> errorToReturn(returnValue, validation);
+		return std::move(errorToReturn);
+	}
+
 	// Builds an error return for convenient returning of errors
 	template<typename ReturnType, typename ValidationType>
 	ErrorReturn<ReturnType, ValidationType> MakeErrorReturn(ValidationType validation)

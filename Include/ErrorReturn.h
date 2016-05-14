@@ -68,8 +68,12 @@ namespace Mist
 	};
 
 	// Builds an error return for convenient returning of errors
-	template<typename ReturnType, typename ValidationType = bool>
+	template<typename ReturnType, typename ValidationType>
 	ErrorReturn<ReturnType, ValidationType> MakeErrorReturn(ReturnType returnValue, ValidationType validation);
+
+	// Builds an error return for convenient returning of errors
+	template<typename ReturnType>
+	ErrorReturn<ReturnType, bool> MakeErrorReturn(ReturnType returnValue, bool validation = true);
 
 	// Builds an error return for convenient returning of errors
 	template<typename ReturnType, typename ValidationType = bool>
