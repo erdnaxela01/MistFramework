@@ -1,7 +1,5 @@
 #pragma once
 
-#include <type_traits>
-
 namespace Mist
 {
 	namespace Detail
@@ -44,7 +42,7 @@ namespace Mist
 		//			the value might be garbage after returning
 		ReturnType Get();
 
-		// An accessor function that provides the user 
+		// An accessors function that provides the user 
 		// with the opportunity to do more processing with the error
 		ValidationType GetError();
 

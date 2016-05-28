@@ -67,7 +67,7 @@ namespace Mist
 	template<typename ReturnType, typename ValidationType>
 	ErrorReturn<ReturnType, ValidationType>& ErrorReturn<ReturnType, ValidationType>::operator=(ErrorReturn&& other)
 	{
-		// Move all of the data into our own
+		// Move all of the data into our own class
 		m_ReturnValue = std::move(other.m_ReturnValue);
 		m_Validation = std::move(other.m_Validation);
 		m_IsVerified = other.m_IsVerified;
