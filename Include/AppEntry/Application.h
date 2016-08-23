@@ -1,11 +1,13 @@
 #pragma once
 
+#include <cstdint>
+
 namespace Mist
 {
 	namespace Detail
 	{
 		// Determines the specific success value for the application
-		const int APPLICATION_SUCCESS = 0;
+		const int32_t APPLICATION_SUCCESS = 0;
 	}
 
 	// Summary: The Application class handles a unified application entry in order to avoid
@@ -18,6 +20,7 @@ namespace Mist
 	//	Public
 	//	
 	//	The mist string format will be renamed as CommandArgument
+	//	The mist list format will be rename as CommandContainer
 	//
 	//  // Loads the c command arguments and stores them in a c++ object rather than c
 	//	// char pointers.
