@@ -3,6 +3,12 @@
 #include <cstdint>
 #include <string>
 
+#ifdef EXPORT_DLL
+#define STRING_DLL _declspec(dllexport)
+#else
+#define STRING_DLL
+#endif
+
 namespace Mist
 {
 	namespace Detail
@@ -10,9 +16,9 @@ namespace Mist
 		
 	}
 
-	// // Summary:	The Mist string class is used as an abstraction layer between the framework
-	// //		and the user. Abstracting away which string class is being used.
-	class String
+	// Summary:	The Mist string class is used as an abstraction layer between the framework
+	//			and the user. Abstracting away which string class is being used.
+	class STRING_DLL String
 	{
 	public:
 		using StringSize = int32_t;
@@ -48,7 +54,7 @@ namespace Mist
 		void Resize(StringSize desiredSize);
 
 		// remove all data in the string
-		void EraseString() noexcept;
+		void Erase() noexcept;
 
 		bool IsEmpty() const noexcept;
 
@@ -70,7 +76,7 @@ namespace Mist
 	private:
 		using StringImplementation = std::string;
 
-		StringImplementation	m_String;
+		StringImplementation m_String;
 		
 	};
 

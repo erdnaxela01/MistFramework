@@ -79,7 +79,7 @@ namespace Mist
 	}
 
 	// remove all data in the string
-	void String::EraseString() noexcept
+	void String::Erase() noexcept
 	{
 		m_String.clear();
 	}

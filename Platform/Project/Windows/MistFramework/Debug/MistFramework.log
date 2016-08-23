@@ -1,5 +1,7 @@
 ﻿  main.cpp
+c:\users\famil\desktop\mistframework\platform\project\windows\mistframework\main.cpp(9): warning C4100: 'application': unreferenced formal parameter
   ErrorTests.cpp
   Generating Code...
-  MistFramework.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\Debug\MistFramework.exe
-  MistFramework.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\Debug\MistFramework.pdb (Partial PDB)
+     Creating library C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.lib and object C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.exp
+  MistFramework.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.exe
+  MistFramework.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.pdb (Partial PDB)

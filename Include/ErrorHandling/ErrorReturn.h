@@ -1,5 +1,11 @@
 #pragma once
 
+#ifdef EXPORT_DLL
+#define ERROR_DLL _declspec(dllexport)
+#else
+#define ERROR_DLL
+#endif
+
 namespace Mist
 {
 	namespace Detail
@@ -11,7 +17,7 @@ namespace Mist
 	//			The class aims to require the checking of the error before capturing the value. The user may also
 	//			retrieve the value without checking the error however he has to be explicit about it.
 	template<typename ReturnType, typename ValidationType = bool>
-	class ErrorReturn
+	class ERROR_DLL ErrorReturn
 	{
 	public:
 		using ValidationCallback = bool(*)(ValidationType validation);
