@@ -49,7 +49,6 @@ void RunErrorTests()
 	CheckError(failedResult);
 
 	auto successfulResult	= SomeRoutine(false);
-
 	CheckError(successfulResult);
 
 }

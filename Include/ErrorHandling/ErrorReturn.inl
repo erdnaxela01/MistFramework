@@ -75,7 +75,7 @@ namespace Mist
 	}
 
 	template<typename ReturnType, typename ValidationType>
-	bool ErrorReturn<ReturnType, ValidationType>::Verify()
+	bool ErrorReturn<ReturnType, ValidationType>::Verify() const
 	{
 		m_IsVerified = true;
 		return m_ValidationCallback(m_Validation);
@@ -89,7 +89,7 @@ namespace Mist
 	}
 
 	template<typename ReturnType, typename ValidationType>
-	ValidationType ErrorReturn<ReturnType, ValidationType>::GetError()
+	ValidationType ErrorReturn<ReturnType, ValidationType>::GetError() const
 	{
 		return m_Validation;
 	}

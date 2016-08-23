@@ -33,7 +33,7 @@ namespace Mist
 		// Indicates if there was an error or not
 		// @Detail: Flips the verification flag to indicate the error
 		//			has been verified
-		bool Verify();
+		bool Verify() const;
 
 		// Retrieve the constructed return value
 		// @Detail: This routine uses verification in order to assure
@@ -44,7 +44,7 @@ namespace Mist
 
 		// An accessors function that provides the user 
 		// with the opportunity to do more processing with the error
-		ValidationType GetError();
+		ValidationType GetError() const;
 
 		// Retrieve the return value without validation
 		// @Detail: This routine does not use verification
@@ -57,11 +57,11 @@ namespace Mist
 		void SetValidationCallback(ValidationCallback validationCallback);
 
 	private:
-		ReturnType			m_ReturnValue;
-		ValidationType		m_Validation;
-		bool				m_IsVerified;
+		ReturnType					m_ReturnValue;
+		ValidationType				m_Validation;
+		mutable bool				m_IsVerified;
 
-		ValidationCallback	m_ValidationCallback;
+		ValidationCallback			m_ValidationCallback;
 
 	};
 
@@ -79,4 +79,4 @@ namespace Mist
 }
 
 // Include the template definitions
-#include "ErrorHandling/ErrorReturn.inl"
+#include "ErrorReturn.inl"

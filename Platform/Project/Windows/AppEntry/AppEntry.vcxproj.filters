@@ -13,26 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\ErrorHandling">
-      <UniqueIdentifier>{911649ba-eda3-4d93-b933-3e37780aa188}</UniqueIdentifier>
+    <Filter Include="Header Files\AppEntry">
+      <UniqueIdentifier>{df685367-0b55-46d4-a6cb-a0361cb2e3c4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\ErrorHandling">
-      <UniqueIdentifier>{25d56921-03e0-4f65-9890-5f53528b0de3}</UniqueIdentifier>
+    <Filter Include="Source Files\AppEntry">
+      <UniqueIdentifier>{9770a9c9-f931-4301-9ccb-0173fcdeb097}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\AppEntry\Application.cpp">
+      <Filter>Source Files\AppEntry</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\Include\ErrorHandling\ErrorReturn.inl">
-      <Filter>Header Files\ErrorHandling</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\Include\ErrorHandling\ErrorReturn.h">
-      <Filter>Header Files\ErrorHandling</Filter>
+    <ClInclude Include="..\..\..\..\Include\AppEntry\Application.h">
+      <Filter>Header Files\AppEntry</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
