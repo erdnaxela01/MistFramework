@@ -122,4 +122,16 @@ namespace Mist
 		m_String += character;
 		return *this;
 	}
+
+
+	
+	const char* String::ToCString() const
+	{
+		return m_String.c_str();
+	}
+
+	std::string ToStdString(const String& conversionTarget)
+	{
+		return conversionTarget.ToCString();
+	}
 }

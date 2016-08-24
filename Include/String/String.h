@@ -73,11 +73,19 @@ namespace Mist
 		// Add a character to this string
 		String& operator+= (char character);
 
+
+
+		// Convert the String to a c char array
+		const char* ToCString() const;
+
 	private:
 		using StringImplementation = std::string;
 
 		StringImplementation m_String;
 		
 	};
+
+	// Helper Methods
+	std::string ToStdString(const String& conversionTarget);
 
 }

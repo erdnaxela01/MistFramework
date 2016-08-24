@@ -44,7 +44,7 @@ namespace Mist
 
 		// Loads the c command arguments and stores them in a c++ object rather than c
 		// char pointers.
-		void LoadCommandArguments(CommandCount argc, char **argv);
+		void LoadCommandArguments(CommandCount argc, const char **argv);
 
 		// Invokes the App entry for the program
 		// @Detail: This method invokes AppEntry defined under Mist as an extern
@@ -56,10 +56,10 @@ namespace Mist
 		// Returns a specified command argument based on the index of the command argument
 		// @Detail: The reasoning behind returning the item based on the index is due to
 		//			the added flexibility of keeping the interface opaque.
-		CommandArgument GetCommandArgument(CommandCount index);
+		CommandArgument GetCommandArgument(CommandCount index) const;
 
 		// Returns the number of command arguments contained inside of the application
-		CommandCount GetNumberOfCommandArguments();
+		CommandCount GetNumberOfCommandArguments() const noexcept;
 
 	private:
 		CommandContainer m_Commands;

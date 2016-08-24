@@ -9,9 +9,9 @@ namespace Mist
 
 	}
 
-	void Application::LoadCommandArguments(Application::CommandCount argc, char **argv)
+	void Application::LoadCommandArguments(Application::CommandCount argc, const char **argv)
 	{
-		//Loop through all the commands
+		// Loop through all the commands
 		for (CommandCount index = 0; index < argc; index++)
 		{
 			// Convert the current char pointer to our desired string format
@@ -29,7 +29,7 @@ namespace Mist
 		return flag;
 	}
 
-	Application::CommandArgument Application::GetCommandArgument(Application::CommandCount index)
+	Application::CommandArgument Application::GetCommandArgument(Application::CommandCount index) const
 	{
 		//Verify that the index doesn't go out of range
 		if (index >= m_Commands.Size())
@@ -38,12 +38,12 @@ namespace Mist
 			//		assert
 			assert(false);
 		}
-		//		retrieve the argument from the container
-		//		return the argument
+		//	retrieve the argument from the container
+		//	return the argument
 		return m_Commands[index];
 	}
 
-	Application::CommandCount Application::GetNumberOfCommandArguments()
+	Application::CommandCount Application::GetNumberOfCommandArguments() const noexcept
 	{
 		// Retrieve the size of the container within
 		// Return the size

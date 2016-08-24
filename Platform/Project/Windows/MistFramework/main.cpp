@@ -1,23 +1,11 @@
-#include "../../../../Include/ErrorHandling/ErrorReturn.h"
-#include "../../../../Include/AppEntry/Application.h"
-
 #include <iostream>
 #include "ErrorTests.h"
+#include "ApplicationTest.h"
 
-namespace Mist
-{
-	Application::TerminationFlag AppEntry(const Application& application)
-	{
-		std::cout << "Application Invoked" << std::endl;
-		return Application::NoReport;
-	}
-}
-
-int main()
+int main(int argc, const char** argv)
 {
 	RunErrorTests();
-	Mist::Application app;
-	app.InvokeApplicationEntry();
+	RunApplicationTests();
 
 	char c;
 	std::cin >> c;

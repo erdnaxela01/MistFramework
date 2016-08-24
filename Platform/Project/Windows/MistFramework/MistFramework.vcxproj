@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ApplicationTest.cpp" />
     <ClCompile Include="ErrorTests.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ApplicationTest.h" />
     <ClInclude Include="ErrorTests.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

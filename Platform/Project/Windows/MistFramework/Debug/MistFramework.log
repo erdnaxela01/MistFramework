@@ -1,7 +1,10 @@
 ﻿  main.cpp
-c:\users\famil\desktop\mistframework\platform\project\windows\mistframework\main.cpp(9): warning C4100: 'application': unreferenced formal parameter
+c:\users\famil\desktop\mistframework\platform\project\windows\mistframework\main.cpp(5): warning C4100: 'argv': unreferenced formal parameter
+c:\users\famil\desktop\mistframework\platform\project\windows\mistframework\main.cpp(5): warning C4100: 'argc': unreferenced formal parameter
   ErrorTests.cpp
+  ApplicationTest.cpp
   Generating Code...
+  LINK : C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.exe not found or not built by the last incremental link; performing full link
      Creating library C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.lib and object C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.exp
   MistFramework.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.exe
   MistFramework.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\MistFramework.pdb (Partial PDB)
