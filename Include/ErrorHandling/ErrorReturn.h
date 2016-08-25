@@ -44,8 +44,6 @@ namespace Mist
 		// Retrieve the constructed return value
 		// @Detail: This routine uses verification in order to assure
 		//			that the error has been verified.
-		//			this function moves the object out which means
-		//			the value might be garbage after returning
 		ReturnType Get();
 
 		// An accessors function that provides the user 
@@ -55,8 +53,6 @@ namespace Mist
 		// Retrieve the return value without validation
 		// @Detail: This routine does not use verification
 		//			which means the value might be garbage.
-		//			The value also gets moved out which means
-		//			the contained return value might be garbage after returning
 		ReturnType UnsafeGet();
 
 		// Set the validation callback for the verification of the error return value
@@ -71,13 +67,10 @@ namespace Mist
 
 	};
 
+
 	// Builds an error return for convenient returning of errors
 	template<typename ReturnType, typename ValidationType>
 	ErrorReturn<ReturnType, ValidationType> MakeErrorReturn(ReturnType returnValue, ValidationType validation);
-
-	// Builds an error return for convenient returning of errors
-	template<typename ReturnType>
-	ErrorReturn<ReturnType, bool> MakeErrorReturn(ReturnType returnValue, bool validation = true);
 
 	// Builds an error return for convenient returning of errors
 	template<typename ReturnType, typename ValidationType = bool>

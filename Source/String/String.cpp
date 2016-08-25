@@ -27,7 +27,7 @@ namespace Mist
 	}
 
 	// Move the string from another string
-	String::String(String&& otherString) noexcept : m_String(otherString.m_String)
+	String::String(String&& otherString) noexcept : m_String(std::move(otherString.m_String))
 	{
 
 	}
@@ -35,7 +35,7 @@ namespace Mist
 
 	String& String::operator= (String&& otherString) noexcept
 	{
-		m_String = otherString.m_String;
+		m_String = std::move(otherString.m_String);
 		return *this;
 	}
 

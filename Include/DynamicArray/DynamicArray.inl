@@ -32,7 +32,7 @@ namespace Mist
 	}
 
 	template<typename ArrayType>
-	DynamicArray<ArrayType>::DynamicArray(DynamicArray&& otherArray) : m_DynamicArray(otherArray.m_DynamicArray)
+	DynamicArray<ArrayType>::DynamicArray(DynamicArray&& otherArray) : m_DynamicArray(std::move(otherArray.m_DynamicArray))
 	{
 
 	}
@@ -40,7 +40,7 @@ namespace Mist
 	template<typename ArrayType>
 	DynamicArray<ArrayType>& DynamicArray<ArrayType>::operator= (DynamicArray&& otherArray)
 	{
-		m_DynamicArray = otherArray.m_DynamicArray;
+		m_DynamicArray = std::move(otherArray.m_DynamicArray);
 		return *this;
 	}
 
