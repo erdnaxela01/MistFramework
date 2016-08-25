@@ -1,19 +1,31 @@
 #pragma once
 
 #include "DynamicLibraryTemplate.h"
+#include "../String/String.h"
+#include "../ErrorHandling/ErrorReturn.h"
 #include "../PlatformDefines.h"
-#include "../PlatformIncludes.h"
+
+#ifdef MIST_WINDOWS
+
+#include "Windows\WindowsDynamicLibrary.h"
+namespace Mist
+{
+	using DynamicLibrary = DynamicLibraryTemplate<WindowsDynamicLibrary>;
+}
+
+#else
+
+#endif
 
 namespace Mist
 {
 	namespace Detail
 	{
-
 	}
 
-#ifdef MIST_WINDOWS
-	using DynamicLibrary = DynamicLibraryTemplate<float>;
-#else
+	// Load a dynamic library and return it if it loaded
+	ErrorReturn<DynamicLibrary> LoadDynamicLibrary(String libraryName);
 
-#endif
+
 }
+

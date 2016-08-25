@@ -45,7 +45,7 @@ namespace Mist
 
 		// Retrieves a routine from the library based on the routine's name
 		template<typename RoutineType = void*>
-		RoutineType GetRoutine(String routineName);
+		ErrorReturn<RoutineType> GetRoutine(String routineName);
 
 		// Closes the library
 		void CloseLibrary();

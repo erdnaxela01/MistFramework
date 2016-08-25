@@ -24,12 +24,18 @@
     <ClCompile Include="ApplicationTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DynamicLibraryTests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ErrorTests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ApplicationTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLibraryTests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

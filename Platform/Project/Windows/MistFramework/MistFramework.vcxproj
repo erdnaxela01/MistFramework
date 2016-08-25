@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationTest.cpp" />
+    <ClCompile Include="DynamicLibraryTests.cpp" />
     <ClCompile Include="ErrorTests.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ApplicationTest.h" />
+    <ClInclude Include="DynamicLibraryTests.h" />
     <ClInclude Include="ErrorTests.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -91,7 +93,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>../../../Library\$(Configuration)\;C:\Program Files (x86)\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Application.lib;String.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Application.lib;String.lib;DynamicLibrary.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,7 +115,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>../../../Library\$(Configuration)\;C:\Program Files (x86)\Visual Leak Detector\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Application.lib;String.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Application.lib;String.lib;DynamicLibrary.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

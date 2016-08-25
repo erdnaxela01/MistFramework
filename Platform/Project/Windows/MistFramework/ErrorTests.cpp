@@ -13,7 +13,7 @@ ErrorReturn<int> SomeRoutine(bool shouldFail)
 	}
 	else
 	{
-		return MakeErrorReturn(5);
+		return MakeErrorReturn(5, true);
 	}
 }
 

@@ -24,6 +24,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicArray", "DynamicArray\DynamicArray.vcxproj", "{3334B9E8-2436-4359-8A52-CEDCAE95ABA3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicLibrary", "DynamicLibrary\DynamicLibrary.vcxproj", "{600847E6-41B0-4D5E-B56D-878E8FF099CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2BB11BA-B50D-4E15-BD2D-89017EB3D459} = {D2BB11BA-B50D-4E15-BD2D-89017EB3D459}
+		{AB15F0E3-BAA4-492C-B312-F413C9C33DE3} = {AB15F0E3-BAA4-492C-B312-F413C9C33DE3}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

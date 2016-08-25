@@ -1,4 +1,5 @@
 #include "../ErrorHandling/ErrorReturn.h"
+#include "PlatformDynamicLibraryExtensions.h"
 #include <type_traits>
 
 namespace Mist
@@ -23,14 +24,15 @@ namespace Mist
 	template<typename Implementation>
 	bool DynamicLibraryTemplate<Implementation>::LoadDynamicLibrary(String libraryName)
 	{
+		libraryName = Detail::StripPlatformDynamicLibraryExtensions(libraryName);
 		return m_Implementation.LoadDynamicLibrary(libraryName);
 	}
 
 	template<typename Implementation>
 	template<typename RoutineType>
-	RoutineType DynamicLibraryTemplate<Implementation>::GetRoutine(String routineName)
+	ErrorReturn<RoutineType> DynamicLibraryTemplate<Implementation>::GetRoutine(String routineName)
 	{
-		return m_Implentation.GetRoutine<RoutineType>(routineName);
+		return m_Implementation.GetRoutine<RoutineType>(routineName);
 	}
 
 	template<typename Implementation>

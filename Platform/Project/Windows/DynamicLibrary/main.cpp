@@ -4,13 +4,20 @@
 
 int main()
 {
-	Mist::DynamicLibrary library;
-	auto returnType = library.GetImplementation<float>();
+	auto libraryResult = Mist::LoadDynamicLibrary("vulkan-1");
+	
 
-	if (returnType.Verify())
+	if (libraryResult.Verify())
 	{
 		std::cout << "Success" << std::endl;
-		std::cout << returnType.Get() << std::endl;
+		auto library = libraryResult.Get();
+		
+		auto routineResult = library.GetRoutine<int(*)(int, const char**)>("vkGetInstanceProcAddr");
+		if (routineResult.Verify())
+		{
+			const char** stuff = nullptr;
+			//routineResult.Get()(0, stuff);
+		}
 	}
 
 	char c;

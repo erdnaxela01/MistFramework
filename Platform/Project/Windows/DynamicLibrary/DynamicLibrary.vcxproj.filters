@@ -36,6 +36,9 @@
     <ClCompile Include="..\..\..\..\Source\DynamicLibrary\Windows\WindowsDynamicLibrary.cpp">
       <Filter>Source Files\DynamicLibrary\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Source\DynamicLibrary\PlatformDynamicLibraryExtensions.cpp">
+      <Filter>Source Files\DynamicLibrary</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Include\PlatformIncludes.h">
@@ -53,10 +56,16 @@
     <ClInclude Include="..\..\..\..\Include\DynamicLibrary\Windows\WindowsDynamicLibrary.h">
       <Filter>Header Files\DynamicLibrary\Windows</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Include\DynamicLibrary\PlatformDynamicLibraryExtensions.h">
+      <Filter>Header Files\DynamicLibrary</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Include\DynamicLibrary\DynamicLibraryTemplate.inl">
       <Filter>Header Files\DynamicLibrary</Filter>
+    </None>
+    <None Include="..\..\..\..\Include\DynamicLibrary\Windows\WindowsDynamicLibrary.inl">
+      <Filter>Header Files\DynamicLibrary\Windows</Filter>
     </None>
   </ItemGroup>
 </Project>

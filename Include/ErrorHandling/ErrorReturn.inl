@@ -111,15 +111,15 @@ namespace Mist
 	ErrorReturn<ReturnType, ValidationType> MakeErrorReturn(ReturnType returnValue, ValidationType validation)
 	{
 		// Create the error return and return it to the caller
-		ErrorReturn<ReturnType, ValidationType> errorToReturn(returnValue, validation);
+		ErrorReturn<ReturnType, ValidationType> errorToReturn(std::forward<ReturnType>(returnValue), std::forward<ValidationType>(validation));
 		return std::move(errorToReturn);
 	}
 
 	template<typename ReturnType>
-	ErrorReturn<ReturnType, bool> MakeErrorReturn(ReturnType returnValue, bool validation = true)
+	ErrorReturn<ReturnType, bool> MakeErrorReturn(ReturnType returnValue, bool validation)
 	{
 		// Create the error return and return it to the caller
-		ErrorReturn<ReturnType, bool> errorToReturn(returnValue, validation);
+		ErrorReturn<ReturnType, bool> errorToReturn(std::forward<ReturnType>(returnValue), validation);
 		return std::move(errorToReturn);
 	}
 
@@ -128,7 +128,7 @@ namespace Mist
 	ErrorReturn<ReturnType, ValidationType> MakeErrorReturn(ValidationType validation)
 	{
 		// create the error return and return it to the caller
-		ErrorReturn<ReturnType, ValidationType> errorToReturn(validation);
+		ErrorReturn<ReturnType, ValidationType> errorToReturn(std::forward<ValidationType>(validation));
 		return std::move(errorToReturn);
 	}
 }
