@@ -52,6 +52,7 @@ namespace Mist
 		m_Validation = other.m_Validation;
 		m_IsVerified = other.m_IsVerified;
 		m_ValidationCallback = other.m_ValidationCallback;
+		return *this;
 	}
 
 	template<typename ReturnType, typename ValidationType>
@@ -72,6 +73,7 @@ namespace Mist
 		m_Validation = std::move(other.m_Validation);
 		m_IsVerified = other.m_IsVerified;
 		m_ValidationCallback = other.m_ValidationCallback;
+		return *this;
 	}
 
 	template<typename ReturnType, typename ValidationType>

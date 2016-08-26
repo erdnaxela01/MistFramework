@@ -18,7 +18,8 @@ namespace Mist
 	template<typename Implementation>
 	DynamicLibraryTemplate<Implementation>& DynamicLibraryTemplate<Implementation>::operator= (DynamicLibraryTemplate&& otherLibrary)
 	{
-		m_Implentation = std::move(otherLibrary.m_Implementation);
+		m_Implementation = std::move(otherLibrary.m_Implementation);
+		return *this;
 	}
 
 	template<typename Implementation>

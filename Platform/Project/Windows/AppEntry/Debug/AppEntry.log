@@ -1,1 +1,37 @@
-﻿
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (AppEntry.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+c:\users\famil\desktop\mistframework\include\string\string.h(84): warning C4251: 'Mist::String::m_String': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Mist::String'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(79): warning C4251: 'Mist::DynamicArray<ArrayType>::m_DynamicArray': class 'std::vector<ArrayType,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Mist::DynamicArray<ArrayType>'
+  c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(77): note: see declaration of 'std::vector<ArrayType,std::allocator<_Ty>>'
+  c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(81): note: see reference to class template instantiation 'Mist::DynamicArray<ArrayType>' being compiled
+c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(79): warning C4251: 'Mist::DynamicArray<Mist::Application::CommandArgument>::m_DynamicArray': class 'std::vector<Mist::String,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Mist::DynamicArray<Mist::Application::CommandArgument>'
+          with
+          [
+              _Ty=Mist::String
+          ]
+  c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(77): note: see declaration of 'std::vector<Mist::String,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Mist::String
+          ]
+  c:\users\famil\desktop\mistframework\include\appentry\application.h(65): note: see reference to class template instantiation 'Mist::DynamicArray<Mist::Application::CommandArgument>' being compiled
+  Application.cpp
+c:\users\famil\desktop\mistframework\include\string\string.h(84): warning C4251: 'Mist::String::m_String': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'Mist::String'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(79): warning C4251: 'Mist::DynamicArray<ArrayType>::m_DynamicArray': class 'std::vector<ArrayType,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Mist::DynamicArray<ArrayType>'
+  c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(77): note: see declaration of 'std::vector<ArrayType,std::allocator<_Ty>>'
+  c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(81): note: see reference to class template instantiation 'Mist::DynamicArray<ArrayType>' being compiled
+c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(79): warning C4251: 'Mist::DynamicArray<Mist::Application::CommandArgument>::m_DynamicArray': class 'std::vector<Mist::String,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'Mist::DynamicArray<Mist::Application::CommandArgument>'
+          with
+          [
+              _Ty=Mist::String
+          ]
+  c:\users\famil\desktop\mistframework\include\dynamicarray\dynamicarray.h(77): note: see declaration of 'std::vector<Mist::String,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Mist::String
+          ]
+  c:\users\famil\desktop\mistframework\include\appentry\application.h(65): note: see reference to class template instantiation 'Mist::DynamicArray<Mist::Application::CommandArgument>' being compiled
+  Generating Code...
+  AppEntry.vcxproj -> C:\Users\famil\Desktop\MistFramework\Platform\Project\Windows\..\..\Library\Debug\Application.lib
